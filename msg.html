@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="title" content="可视化布局系统">
+	<meta name="description" content="可拖放排序在线编辑可视化布局系统">
+	<meta name="keywords" content="可视化,布局,系统">
+	<title>可视化布局系统 - HTML我帮您</title>
+	<link rel="stylesheet" href="./static/lib/weui/css/weui.css"/>
+</head>
+<body>
+	<div id="container" class="container">
+		<div class="page">
+			 <div class="group inner">
+    <div class="weui-msg"> <i class="weui-icon-success weui-icon_msg"></i>
+        <h1>操作成功</h1>
+        <p>操作成功提示内容不错哟</p>
+        <div class="weui-btn-area"> <a href="javascript:;" class="weui-btn weui-btn_primary">推荐操作</a> <a href="javascript:;" class="weui-btn weui-btn_default">辅助操作</a> </div>
+    </div>
+</div>
+		</div>
+	</div>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/jquery.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/weui/js/weui.min.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/nicescroll/nicescroll.js"></script>
+	<style>
+		html,body,body>.group{
+			height:100%;
+			overflow:hidden;
+		}
+		.container {
+		    overflow: hidden;
+		}
+		.container, .page {
+		    bottom: 0;
+		    left: 0;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    height:100%;
+		}
+		.page {
+		    z-index: 1;
+		}
+		body>.group::before,body>.group::after {
+		    box-sizing: border-box;
+		}
+		.weui-navbar{
+			position:relative;
+		}
+		.weui-tabbar{
+			position:fixed;
+		}
+	</style>
+	<script>
+		$(function () {
+			$(".group").css({height:'auto'});
+			$(".page").niceScroll({cursorcolor:"#666"});
+		});
+	</script>
+</body>
+</html>
+

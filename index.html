@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="title" content="可视化布局系统">
+	<meta name="description" content="可拖放排序在线编辑可视化布局系统">
+	<meta name="keywords" content="可视化,布局,系统">
+	<title>可视化布局系统 - HTML我帮您</title>
+	<link rel="stylesheet" href="./static/lib/weui/css/weui.css"/>
+</head>
+<body>
+	<div id="container" class="container">
+		<div class="page">
+			 <div class="group inner">
+    <div class="weui-navbar">
+        <div class="weui-navbar__item  weui-bar__item_on">菜单一</div>
+        <div class="weui-navbar__item  ">菜单二</div>
+        <div class="weui-navbar__item  ">菜单三</div>
+    </div>
+    <div class="weui-grids">
+        <a href="javascript:;" class="weui-grid">
+            <div class="weui-grid__icon"> <img alt="菜单一" src="./static/image/2017/01/html580b.png"> </div>
+            <p class="weui-grid__label">菜单一</p>
+        </a>
+        <a href="javascript:;" class="weui-grid">
+            <div class="weui-grid__icon"> <img alt="菜单二" src="./static/image/2017/01/html580.png"> </div>
+            <p class="weui-grid__label">菜单二</p>
+        </a>
+        <a href="javascript:;" class="weui-grid">
+            <div class="weui-grid__icon"> <img alt="菜单k" src="./static/lib/weui/img/icon_tabbar.png"> </div>
+            <p class="weui-grid__label">菜单k</p>
+        </a>
+    </div>
+    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__hd"> <img class="weui-media-box__thumb" src="./static/lib/weui/img/icon_tabbar.png" alt="标题一"> </div>
+        <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">标题一</h4>
+            <p class="weui-media-box__desc">说明文字</p>
+        </div>
+    </a>
+    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__hd"> <img class="weui-media-box__thumb" src="./static/lib/weui/img/icon_tabbar.png" alt="标题二"> </div>
+        <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">标题二</h4>
+            <p class="weui-media-box__desc">说明文字</p>
+        </div>
+    </a>
+    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__hd"> <img class="weui-media-box__thumb" src="./static/lib/weui/img/icon_tabbar.png" alt="标题三"> </div>
+        <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">标题三</h4>
+            <p class="weui-media-box__desc">说明文字</p>
+        </div>
+    </a>
+    <div class="weui-tabbar">
+        <a href="javascript:;" class="weui-tabbar__item  weui-bar__item_on "> <img src="./static/image/2017/01/12.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">菜单一</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item "> <img src="./static/image/2017/01/12.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">菜单二</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item "> <img src="./static/lib/weui/img/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">菜单三</p>
+        </a>
+    </div>
+</div>
+		</div>
+	</div>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/jquery.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/weui/js/weui.min.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/nicescroll/nicescroll.js"></script>
+	<style>
+		html,body,body>.group{
+			height:100%;
+			overflow:hidden;
+		}
+		.container {
+		    overflow: hidden;
+		}
+		.container, .page {
+		    bottom: 0;
+		    left: 0;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    height:100%;
+		}
+		.page {
+		    z-index: 1;
+		}
+		body>.group::before,body>.group::after {
+		    box-sizing: border-box;
+		}
+		.weui-navbar{
+			position:relative;
+		}
+		.weui-tabbar{
+			position:fixed;
+		}
+	</style>
+	<script>
+		$(function () {
+			$(".group").css({height:'auto'});
+			$(".page").niceScroll({cursorcolor:"#666"});
+		});
+	</script>
+</body>
+</html>
+

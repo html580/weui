@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="title" content="可视化布局系统">
+	<meta name="description" content="可拖放排序在线编辑可视化布局系统">
+	<meta name="keywords" content="可视化,布局,系统">
+	<title>可视化布局系统 - HTML我帮您</title>
+	<link rel="stylesheet" href="./static/lib/weui/css/weui.css"/>
+</head>
+<body>
+	<div id="container" class="container">
+		<div class="page">
+			 <div class="group inner">
+    <div class="">
+        <div class="weui-cells__title">单选列表</div>
+        <div class="weui-cells weui-cells_radio"> <label for="2018550" class="weui-cell weui-check__label">
+            <div class="weui-cell__bd">
+                <p>选项二</p>
+            </div>
+            <div class="weui-cell__ft">
+                <input id="2018550" name="name_881080" value="2" checked="checked" class="weui-check" type="radio">
+                <span class="weui-icon-checked"></span>
+            </div>
+        </label> <label for="2018551" class="weui-cell weui-check__label">
+            <div class="weui-cell__bd">
+                <p>选项三</p>
+            </div>
+            <div class="weui-cell__ft">
+                <input id="2018551" name="name_881080" value="3" class="weui-check" type="radio">
+                <span class="weui-icon-checked"></span>
+            </div>
+        </label> <label for="2018552" class="weui-cell weui-check__label">
+            <div class="weui-cell__bd">
+                <p>选项三</p>
+            </div>
+            <div class="weui-cell__ft">
+                <input id="2018552" name="name_881080" value="3" class="weui-check" type="radio">
+                <span class="weui-icon-checked"></span>
+            </div>
+        </label> </div>
+        <div class="weui-cells__title">多选列表</div>
+        <div class="weui-cells weui-cells_checkbox"> <label for="3546590" class="weui-cell weui-check__label">
+            <div class="weui-cell__hd">
+                <input id="3546590" name="name_778128" value="1" checked="checked" class="weui-check" type="checkbox">
+                <i class="weui-icon-checked"></i>
+            </div>
+            <div class="weui-cell__bd">
+                <p>选项一</p>
+            </div>
+        </label> <label for="3546591" class="weui-cell weui-check__label">
+            <div class="weui-cell__hd">
+                <input id="3546591" name="name_778128" value="3" class="weui-check" type="checkbox">
+                <i class="weui-icon-checked"></i>
+            </div>
+            <div class="weui-cell__bd">
+                <p>选项三</p>
+            </div>
+        </label> </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd"> <textarea rows="3" placeholder="请输入描述信息" name="name_138099" id="157527" class="weui-textarea"></textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+    </div>
+</div>
+		</div>
+	</div>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/jquery.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/weui/js/weui.min.js"></script>
+	<script charset="utf-8" type="text/javascript" src="./static/lib/nicescroll/nicescroll.js"></script>
+	<style>
+		html,body,body>.group{
+			height:100%;
+			overflow:hidden;
+		}
+		.container {
+		    overflow: hidden;
+		}
+		.container, .page {
+		    bottom: 0;
+		    left: 0;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    height:100%;
+		}
+		.page {
+		    z-index: 1;
+		}
+		body>.group::before,body>.group::after {
+		    box-sizing: border-box;
+		}
+		.weui-navbar{
+			position:relative;
+		}
+		.weui-tabbar{
+			position:fixed;
+		}
+	</style>
+	<script>
+		$(function () {
+			$(".group").css({height:'auto'});
+			$(".page").niceScroll({cursorcolor:"#666"});
+		});
+	</script>
+</body>
+</html>
+
